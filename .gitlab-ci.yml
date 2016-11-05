@@ -3,9 +3,11 @@ stages:
   - deploy
 
 build:
-  scripts:
+  stage: build
+  script:
     - docker build . vitorfox/node-projects
 
 deploy:
-  scripts:
+  stage: deploy
+  script:
     - docker push vitorfox/node-projects
