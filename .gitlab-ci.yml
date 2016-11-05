@@ -1,0 +1,11 @@
+stages:
+  - build
+  - deploy
+
+build:
+  scripts:
+    - docker build . vitorfox/node-projects
+
+deploy:
+  scripts:
+    - docker push vitorfox/node-projects
